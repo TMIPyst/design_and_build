@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+
+    <button class="button" onclick="myFunction()">Click to count</button>
+    <p id="num">0</p>
+
+</div>
+<script>
+    let num = localStorage.getItem("counter");
+
+    function myFunction() {
+        document.getElementById("num").textContent = ++num;
+        localStorage.setItem("counter", document.getElementById("num").textContent);
+    }
+</script>
+</body>
+</html>
